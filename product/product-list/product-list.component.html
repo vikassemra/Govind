@@ -1,0 +1,23 @@
+<h2>
+  Product List Compnent
+</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>S.NO</th>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>MFD</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pro of productlist; let i = index;">
+      <td>{{i + 1}}</td>
+      <td>{{pro.id}}</td>
+      <td>{{pro.name}}</td>
+      <td>{{pro.price}}</td>
+      <td>{{pro.mfd}}</td>
+    </tr>
+  </tbody>
+</table>

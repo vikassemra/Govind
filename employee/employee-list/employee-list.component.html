@@ -1,0 +1,39 @@
+<h1>Employee List</h1>
+
+{{employee | json}}
+<h2>{{headerText}}</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>Even</td>
+            <td>Odd</td>
+            <th>S.No</th>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Date Of Birth</th>
+            <th>Salary</th>
+            <th>Send Employee Id</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr [ngClass]="{'alert alert-danger': odd}" *ngFor="let emp of employee; let i=index; let even=even; let odd=odd;">
+            <td [ngClass]="{'alert alert-danger': even}">{{even}}</td>
+            <td [ngClass]="{'alert alert-success': odd}">{{odd}}</td>
+            <td [ngClass]="{'alert alert-success': odd}">{{i+1}}</td>
+            <td>{{emp.id}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.address}}</td>
+            <td>{{emp.dob}}</td>
+            <td>{{emp.salary}}</td>
+            <td><button type="button" class="btn btn-primary" (click)="sendEmployee(emp)">Send Employee</button></td>
+        </tr>
+    </tbody>
+</table>
+
+<hr>
+<br>
+<button type="button" class="btn btn-primary" (click)="sendToParent()">Send To Parent</button>
+
+

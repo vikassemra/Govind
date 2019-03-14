@@ -1,0 +1,8 @@
+<h1>Department Component</h1>
+<app-department-list [departments]='departmentList' (sendSelectedDepartment)="departmentFromChild($event)"></app-department-list>
+<h2> Selected Department</h2>
+
+<h1>{{depart.id}}</h1>
+<h1>{{depart.name}}</h1>
+<h1>{{depart.hod}}</h1>
+<h1>{{depart.count}}</h1>

@@ -1,0 +1,25 @@
+<hr>
+<h1>Department List</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>S.No</th>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Hod</th>
+      <th>Count</th>
+      <th>Send Selected Department</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor= 'let dep of departments; let i=index;'>
+      <td>{{i + 1}}</td>
+      <td>{{dep.id}}</td>
+      <td>{{dep.name}}</td>
+      <td>{{dep.hod}}</td>
+      <td>{{dep.count}}</td>
+      <td><button type="button" class="btn btn-success" (click)="sendSelected(dep);">Send Selected</button></td>
+    </tr>
+  </tbody>
+</table>
